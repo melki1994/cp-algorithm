@@ -1,0 +1,24 @@
+ALGORITHM    project
+VAR 
+         count-length , count-words , count-vowels , i : INTEGER;
+         str : STRING ;
+BEGIN
+          Write (“Write the sentence“);
+          Read (str);
+           count-length := 0;
+           count-words := 0;
+           count-vowels := 0;
+           i := 0;
+    WHILE (str[i]<>’.’) DO
+           IF (str[i]<>’ ‘) THEN
+                count-length := count-length + 1;
+           END_IF
+           IF (str[i]<>’ ‘ and (str[i+1]=’ ‘) or (str[i+1]=’.’) THEN
+                count-words := count-words + 1;
+           END_IF
+           IF (str[i] = ‘a’ or str[i] = ‘e’ or str[i] = ‘o’ or str[i] = ‘i’ or str[i] = ‘u’) THEN
+                count-vowels := count-vowels + 1;
+           END_IF
+                   i := i+1 ;
+    END_WHILE    
+END  
